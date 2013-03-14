@@ -8,8 +8,6 @@
 
 #import "FileTableView.h"
 #import "AppDelegate.h"
-// #import "QuickLook/QuickLook.h"
-// #import "QuickLook/QLGenerator.h"
 
 @implementation FileTableView
 
@@ -23,6 +21,8 @@
     if ([theEvent type] == NSKeyDown && [chars length] == 1) {
         
         int val = [chars characterAtIndex:0];
+        
+        // NSLog(@"key: %d", val);
         
         switch (val) {
             case KEY_RETURN:
@@ -54,6 +54,7 @@
                     [self selectRowIndex: [self selectedRow] + 10];
                     return;
                 }
+                [super keyDown:theEvent];
                 break;
                 
             case KEY_UP:
@@ -67,6 +68,7 @@
                     [self selectRowIndex: [self selectedRow] - 10];
                     return;
                 }
+                [super keyDown:theEvent];
                 break;
             case KEY_TAB:
                 [appDelegate selectNext: searchString];
@@ -80,10 +82,14 @@
                 
             case KEY_H:
                 if ([theEvent modifierFlags] & NSCommandKeyMask) {
-                    NSLog(@"cmd + M");
+                    NSLog(@"cmd + H");
                     [appDelegate tooggleVisible];
                     return;
                 }
+            case KEY_SPACE:
+                [appDelegate toggleDrawer];
+            //     [appDelegate toogleQuickLook];
+                
                 
             default:
                 if(val >= 33 && val <= 126) {
@@ -93,7 +99,7 @@
         }
     }
     
-    [super keyDown:theEvent];
+    // [super keyDown:theEvent];
 }
 
 
@@ -136,11 +142,6 @@
     
 }
 
-- (void) quickLookCurrent
-{
-    
-}
-
 /*
 - (NSData *)getDataForFile:(NSString *)path
 {
@@ -169,4 +170,7 @@
     return nil;
 }
 */
+
+
+
 @end

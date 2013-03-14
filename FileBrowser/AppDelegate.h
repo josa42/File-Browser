@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "FileTableView.h"
+#import <Quartz/Quartz.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate> {
     
@@ -17,6 +18,8 @@
     
     NSString *currentpath;
     NSArray *filelist;
+    
+    NSMutableArray *hightlightedRows;
     
     
 }
@@ -32,6 +35,7 @@
 - (NSInteger) quickSearch:(NSString *)searchString withOffset: (NSInteger)offset;
 - (void) selectNext:(NSString *)searchString;
 - (void) tooggleVisible;
+- (void)toggleDrawer;
 
 #pragma mark -
 #pragma mark NSTableViewDelegate
@@ -43,4 +47,6 @@
 @property(assign) IBOutlet FileTableView *tableView;
 @property(assign) IBOutlet NSTextField *headerLabel;
 
+@property(assign) IBOutlet NSImageView *previewView;
+@property(assign) IBOutlet NSDrawer *drawer;
 @end

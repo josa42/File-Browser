@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805F485916F144E700A88634 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 805F485816F144E700A88634 /* icon.iconset */; };
+		805F485B16F144EB00A88634 /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 805F485A16F144EB00A88634 /* icon.iconset */; };
 		80911757163F26D50092F1B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80911756163F26D50092F1B9 /* Cocoa.framework */; };
 		80911761163F26D50092F1B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8091175F163F26D50092F1B9 /* InfoPlist.strings */; };
 		80911763163F26D50092F1B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80911762163F26D50092F1B9 /* main.m */; };
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		805F485616F1330400A88634 /* keycodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keycodes.h; sourceTree = "<group>"; };
+		805F485816F144E700A88634 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; name = icon.iconset; path = FileBrowser/icon.iconset; sourceTree = "<group>"; };
+		805F485A16F144EB00A88634 /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
 		80911752163F26D50092F1B9 /* FileBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80911756163F26D50092F1B9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		80911759163F26D50092F1B9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -82,10 +87,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		805F485716F1432F00A88634 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				805F485816F144E700A88634 /* icon.iconset */,
+				80E23FB3163F928E00A2E61F /* icon.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		80911747163F26D50092F1B9 = {
 			isa = PBXGroup;
 			children = (
-				80E23FB3163F928E00A2E61F /* icon.png */,
+				805F485A16F144EB00A88634 /* icon.iconset */,
+				805F485716F1432F00A88634 /* Assets */,
 				8091175C163F26D50092F1B9 /* FileBrowser */,
 				80911779163F26D60092F1B9 /* FileBrowserTests */,
 				80911755163F26D50092F1B9 /* Frameworks */,
@@ -132,6 +147,7 @@
 				8091175D163F26D50092F1B9 /* Supporting Files */,
 				80E23FAF163F553D00A2E61F /* FileTableView.h */,
 				80E23FB0163F553D00A2E61F /* FileTableView.m */,
+				805F485616F1330400A88634 /* keycodes.h */,
 			);
 			path = FileBrowser;
 			sourceTree = "<group>";
@@ -244,6 +260,7 @@
 				8091176D163F26D50092F1B9 /* MainMenu.xib in Resources */,
 				80E23FB4163F928E00A2E61F /* icon.png in Resources */,
 				80E23FB6163F934300A2E61F /* icon.png in Resources */,
+				805F485B16F144EB00A88634 /* icon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8091177E163F26D60092F1B9 /* InfoPlist.strings in Resources */,
+				805F485916F144E700A88634 /* icon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
