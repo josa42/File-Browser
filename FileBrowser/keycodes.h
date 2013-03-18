@@ -12,6 +12,7 @@
 #define KEY_BACKSPACE   127
 #define KEY_TAB         9
 #define KEY_SPACE       32
+#define KEY_ESC         27
 
 #define KEY_A 65
 #define KEY_B 66

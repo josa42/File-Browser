@@ -18,6 +18,9 @@
     
     [self changeDir:@"/Users/josa/"];
     
+    hightlightedRows = [NSMutableDictionary dictionary];
+    doHighlight = NO;
+    
     
     // _tableView.dataSource = self;
     [_tableView setUsesAlternatingRowBackgroundColors:YES];
@@ -162,6 +165,8 @@
 {
     NSInteger rowIndex = ([_tableView selectedRow]);
     
+    doHighlight = NO;
+    
     NSString *dir;
     if(rowIndex == 0) {
         
@@ -214,8 +219,10 @@
             offset = 0;
         }
     
-    // hightlightedRows = [NSMutableArray array];
+        [hightlightedRows removeAllObjects];
     
+    doHighlight = NO;
+
         for (NSInteger rowIndex = 0; rowIndex < filelist.count; rowIndex++) {
         
         
@@ -229,18 +236,32 @@
                 
                 
                 // NSLog(@"i: %i", rowIndex);
-                if (searchString != nil && index < 0 && rowIndex >= offset) {
-                    return index = (rowIndex + 1);
+                if (searchString != nil) {
+                    
+                    if (index < 0 && rowIndex >= offset) {
+                        index = (rowIndex + 1);
+                        doHighlight =  YES;
+                    }
+                    
+                    [hightlightedRows setObject:[NSNumber numberWithBool:YES] forKey: [NSNumber numberWithInteger:(rowIndex + 1) ]];
+                
                 }
-                
-                // [hightlightedRows addObject:[NSNumber numberWithInteger:(rowIndex + 1)]];
-                
-                // [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathWithIndex:rowIndex]];
             
             }
         }
     
+    NSInteger row = [self.tableView selectedRow];
+    [self.tableView reloadData];
+    [self.tableView selectRowIndexes:[NSIndexSet indexSetWithIndex:row] byExtendingSelection:NO];
+    
     return index;
+}
+
+- (void) resetSearch
+{
+    doHighlight = NO;
+    [self.tableView reloadData];
+    [_tableView selectRowIndex:0];
 }
 
 
@@ -256,6 +277,21 @@
     }
 }
 
+- (void) selectPrevious:(NSString *)searchString
+{
+    
+    NSInteger result = [self quickSearch:searchString withOffset:([_tableView selectedRow])];
+    
+    
+    if(result < 0) {
+        result = [self quickSearch:searchString];
+    }
+    
+    if(result > 0) {
+        [_tableView selectRowIndex:result];
+    }
+}
+
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
     NSInteger rowIndex = ([_tableView selectedRow]);
@@ -263,8 +299,6 @@
     if(rowIndex != 0) {
         
         NSURL *theURL = [filelist objectAtIndex: (rowIndex-1)];
-        // NSLog(@"%@", theURL);
-        // return;
         _previewView.image = [self imageWithPreviewOfFileAtPath:[[theURL absoluteString] substringFromIndex:16] ofSize:NSMakeSize(400, 400) asIcon:NO];
     } else {
         _previewView.image = nil;
@@ -345,6 +379,16 @@
             [url getResourceValue:&fileName forKey:NSURLNameKey error:NULL];
             cellView.textField.stringValue = fileName; // [name objectAtIndex:name.count -1];
         }       
+    }
+    
+    NSNumber *n = (NSNumber *)[hightlightedRows objectForKey:[NSNumber numberWithInteger:rowIndex]];
+    
+    if (doHighlight == NO || (n != NULL && [n boolValue] == YES)) {
+        // cellView.textField.drawsBackground = YES;
+        [cellView.textField setTextColor: [NSColor blackColor]];
+    } else {
+        // cellView.textField.drawsBackground = NO;
+        [cellView.textField setTextColor: [NSColor lightGrayColor]];
     }
     
     // [cellView.textField setBackgroundColor:[NSColor lightGrayColor]];

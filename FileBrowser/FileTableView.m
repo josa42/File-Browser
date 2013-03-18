@@ -13,6 +13,9 @@
 
 - (void) keyDown:(NSEvent *) theEvent
 {
+    if(searchString == nil) {
+        searchString = @"";
+    }
     
         
     AppDelegate *appDelegate = (AppDelegate *)self.delegate;
@@ -71,24 +74,31 @@
                 [super keyDown:theEvent];
                 break;
             case KEY_TAB:
-                [appDelegate selectNext: searchString];
+            case 25:
                 
-                break;
-                
-            case KEY_BACKSPACE:
-                searchString = @"";
-                break;
-                
+                if ([theEvent modifierFlags] & NSShiftKeyMask) {
+                    [appDelegate selectPrevious: searchString];
+                } else {
+                    [appDelegate selectNext: searchString];
+                }
+                break;                
                 
             case KEY_H:
                 if ([theEvent modifierFlags] & NSCommandKeyMask) {
-                    NSLog(@"cmd + H");
                     [appDelegate tooggleVisible];
                     return;
                 }
             case KEY_SPACE:
                 [appDelegate toggleDrawer];
             //     [appDelegate toogleQuickLook];
+                break;
+                
+            case KEY_BACKSPACE:
+            case KEY_ESC:
+                searchString = @"";
+                [appDelegate resetSearch];
+                break;
+                
                 
                 
             default:

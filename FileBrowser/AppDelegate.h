@@ -19,7 +19,9 @@
     NSString *currentpath;
     NSArray *filelist;
     
-    NSMutableArray *hightlightedRows;
+    NSMutableDictionary *hightlightedRows;
+    
+     BOOL doHighlight;
     
     
 }
@@ -29,11 +31,13 @@
 - (void) loadFiles;
 - (void) openCurrent;
 - (void) openSelected;
+- (void) resetSearch;
 - (void) changeDir;
 - (void) changeDir: (NSString *)dir;
 - (NSInteger) quickSearch:(NSString *)searchString;
 - (NSInteger) quickSearch:(NSString *)searchString withOffset: (NSInteger)offset;
 - (void) selectNext:(NSString *)searchString;
+- (void) selectPrevious:(NSString *)searchString;
 - (void) tooggleVisible;
 - (void)toggleDrawer;
 
