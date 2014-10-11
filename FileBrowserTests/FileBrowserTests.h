@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Josa Gesell. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface FileBrowserTests : SenTestCase
+@interface FileBrowserTests : XCTestCase
 
 @end

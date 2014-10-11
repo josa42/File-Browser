@@ -16,7 +16,7 @@
     
     filemgr = [NSFileManager defaultManager];
     
-    [self changeDir:@"/Users/josa/"];
+    [self changeDir:@"/Users/josa/tmp/file-browser-demo"];
     
     hightlightedRows = [NSMutableDictionary dictionary];
     doHighlight = NO;

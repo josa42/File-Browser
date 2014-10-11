@@ -15,10 +15,11 @@
 		80911767163F26D50092F1B9 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 80911765163F26D50092F1B9 /* Credits.rtf */; };
 		8091176A163F26D50092F1B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80911769163F26D50092F1B9 /* AppDelegate.m */; };
 		8091176D163F26D50092F1B9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8091176B163F26D50092F1B9 /* MainMenu.xib */; };
-		80911775163F26D60092F1B9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80911774163F26D60092F1B9 /* SenTestingKit.framework */; };
 		80911776163F26D60092F1B9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80911756163F26D50092F1B9 /* Cocoa.framework */; };
 		8091177E163F26D60092F1B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8091177C163F26D60092F1B9 /* InfoPlist.strings */; };
 		80911781163F26D60092F1B9 /* FileBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80911780163F26D60092F1B9 /* FileBrowserTests.m */; };
+		80C9947819E9B78D00EBB85C /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 80C9947619E9B78D00EBB85C /* readme.md */; };
+		80C9947919E9B78D00EBB85C /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C9947719E9B78D00EBB85C /* TemplateIcon2x.png */; };
 		80E23FB1163F553D00A2E61F /* FileTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E23FB0163F553D00A2E61F /* FileTableView.m */; };
 		80E23FB4163F928E00A2E61F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E23FB3163F928E00A2E61F /* icon.png */; };
 		80E23FB6163F934300A2E61F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80E23FB5163F934300A2E61F /* icon.png */; };
@@ -53,11 +54,12 @@
 		80911769163F26D50092F1B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8091176C163F26D50092F1B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		80911773163F26D60092F1B9 /* FileBrowserTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileBrowserTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		80911774163F26D60092F1B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8091177B163F26D60092F1B9 /* FileBrowserTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FileBrowserTests-Info.plist"; sourceTree = "<group>"; };
 		8091177D163F26D60092F1B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8091177F163F26D60092F1B9 /* FileBrowserTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileBrowserTests.h; sourceTree = "<group>"; };
 		80911780163F26D60092F1B9 /* FileBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileBrowserTests.m; sourceTree = "<group>"; };
+		80C9947619E9B78D00EBB85C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		80C9947719E9B78D00EBB85C /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 		80E23FAF163F553D00A2E61F /* FileTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTableView.h; sourceTree = "<group>"; };
 		80E23FB0163F553D00A2E61F /* FileTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTableView.m; sourceTree = "<group>"; };
 		80E23FB3163F928E00A2E61F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80911775163F26D60092F1B9 /* SenTestingKit.framework in Frameworks */,
 				80911776163F26D60092F1B9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +100,8 @@
 		80911747163F26D50092F1B9 = {
 			isa = PBXGroup;
 			children = (
+				80C9947619E9B78D00EBB85C /* readme.md */,
+				80C9947719E9B78D00EBB85C /* TemplateIcon2x.png */,
 				805F485A16F144EB00A88634 /* icon.iconset */,
 				805F485716F1432F00A88634 /* Assets */,
 				8091175C163F26D50092F1B9 /* FileBrowser */,
@@ -122,7 +125,6 @@
 			children = (
 				80E23FB7163F96E900A2E61F /* QuickLook.framework */,
 				80911756163F26D50092F1B9 /* Cocoa.framework */,
-				80911774163F26D60092F1B9 /* SenTestingKit.framework */,
 				80911758163F26D50092F1B9 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -221,7 +223,7 @@
 			name = FileBrowserTests;
 			productName = FileBrowserTests;
 			productReference = 80911773163F26D60092F1B9 /* FileBrowserTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -229,7 +231,8 @@
 		80911749163F26D50092F1B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastTestingUpgradeCheck = 0600;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Josa Gesell";
 			};
 			buildConfigurationList = 8091174C163F26D50092F1B9 /* Build configuration list for PBXProject "FileBrowser" */;
@@ -261,6 +264,7 @@
 				80E23FB4163F928E00A2E61F /* icon.png in Resources */,
 				80E23FB6163F934300A2E61F /* icon.png in Resources */,
 				805F485B16F144EB00A88634 /* icon.iconset in Resources */,
+				80C9947919E9B78D00EBB85C /* TemplateIcon2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 			files = (
 				80911763163F26D50092F1B9 /* main.m in Sources */,
 				8091176A163F26D50092F1B9 /* AppDelegate.m in Sources */,
+				80C9947819E9B78D00EBB85C /* readme.md in Sources */,
 				80E23FB1163F553D00A2E61F /* FileTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +365,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -390,7 +394,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -418,7 +421,7 @@
 				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -432,7 +435,7 @@
 				INFOPLIST_FILE = "FileBrowser/FileBrowser-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -442,13 +445,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileBrowser.app/Contents/MacOS/FileBrowser";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
 				INFOPLIST_FILE = "FileBrowserTests/FileBrowserTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -457,13 +462,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FileBrowser.app/Contents/MacOS/FileBrowser";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FileBrowser/FileBrowser-Prefix.pch";
 				INFOPLIST_FILE = "FileBrowserTests/FileBrowserTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
